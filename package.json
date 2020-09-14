@@ -2,10 +2,10 @@
   "name": "itube",
   "version": "1.0.0",
   "description": "Youtube clone coding with Nodejs",
-  "main": "index.js",
+  "main": "init.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js --delay 2"
+    "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "author": "minkikim",
   "license": "ISC",
