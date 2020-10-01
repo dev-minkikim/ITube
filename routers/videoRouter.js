@@ -1,12 +1,20 @@
 // /videos 라우터
+import routes from "../routes.js";
 import express from "express";
+import {
+  videos,
+  upload,
+  videoDetail,
+  videoEdit,
+  videoDelete,
+} from "../controllers/videoController.js";
 
 const videoRouter = express();
 
-videoRouter.get("/", (req, res) => res.send("videos"));
-videoRouter.get("/upload", (req, res) => res.send("video Upload"));
-videoRouter.get("/:id", (req, res) => res.send("video-edit"));
-videoRouter.get("/:id/edit", (req, res) => res.send("video 수정"));
-videoRouter.get("/:id/delete", (req, res) => res.send("비디오 삭제"));
+videoRouter.get(routes.videos, videos);
+videoRouter.get(routes.upload, upload);
+videoRouter.get(routes.videoDetail, videoDetail);
+videoRouter.get(routes.videoEdit, videoEdit);
+videoRouter.get(routes.videoDelete, videoDelete);
 
 export default videoRouter;
